@@ -16,7 +16,9 @@ app.use("/api/companies", require("./routes/companyRoutes"));
 app.use("/api/jobs", require("./routes/jobRoutes"));
 app.use("/api/applications", require("./routes/applicationRoutes"));
 
-
+app.get("/", (req, res) => {
+  res.send("Welcome to the Job Portal API");
+});
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
